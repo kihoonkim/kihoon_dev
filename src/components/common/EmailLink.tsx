@@ -1,4 +1,3 @@
-import React from 'react';
 import styled from 'styled-components';
 import Text, {FontType} from "./Text";
 import {BLUE} from "../../constants/colors";

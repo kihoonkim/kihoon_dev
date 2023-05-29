@@ -1,4 +1,3 @@
-import React from 'react';
 import styled from "styled-components";
 import ProfileImage from '../../assets/profile.jpeg'
 import Text from "../common/Text";

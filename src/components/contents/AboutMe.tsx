@@ -1,4 +1,3 @@
-import React from 'react';
 import styled from "styled-components";
 import MainImage from '../../assets/main-image.webp'
 import Text from "../common/Text";
