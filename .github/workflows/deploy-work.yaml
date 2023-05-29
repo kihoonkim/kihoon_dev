@@ -6,7 +6,7 @@ jobs:
   deploy_next_app:
     runs-on: ubuntu-latest
     env:
-      S3_BUCKET: kihoon.dev
+      S3_BUCKET: kihoon-dev-web
       CF_DISTRIBUTION_ID: E3PWT3ZABC49K8
     steps:
       - name: Checkout source code
@@ -14,7 +14,7 @@ jobs:
 
       - name: Install Dependencies
         run: npm install
-      - name: Next Build & Export (generate static html)
+      - name: React Build & Export (generate static html)
         run: npm run build
 
       - name: Configure AWS Credentials
