@@ -25,17 +25,25 @@ const S = {
     padding: 2rem;
     gap: 0.5rem
   `,
+  ShortDivider: styled.div`
+    width: 7rem;
+    height: 0.25rem;
+    border-bottom: rebeccapurple solid 0.25rem;
+    margin-bottom: 7rem;
+    align-self: center;
+  `,
 }
 function Experience() {
   return (
     <S.Container>
-      <Text type={"H3"} text={"Experience"} weight={800} />
+      <S.ShortDivider />
+      <Text type={"H3"} text={"경력"} weight={800} />
 
       <S.CardList>
         <S.CardContainer>
           <Text type={"B1"} text={"NPX TeraArk"} weight={900} />
           <Text type={"B2"} text={" "} />
-          <Text type={"B2"} text={"21.11 ~ 20 : 1년 8개월"} />
+          <Text type={"B2"} text={"21.11 ~ 23.06 : 1년 8개월"} />
           <Text type={"B2"} text={"Venture Studio"} weight={800}/>
           <Text type={"B2"} text={"Developer, DevOps"} />
           <Text type={"B2"} text={"BuffAI, SpeakEdi, Ontonomy, Point Avenue"} />

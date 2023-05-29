@@ -46,7 +46,7 @@ const S = {
 function Portfolios() {
   return (
     <S.Container>
-      <Text type={"H3"} text={"Project"} weight={800} />
+      <Text type={"H3"} text={"프로젝트"} weight={800} />
       <S.PortfolioContainer>
         <S.TechContainer>
           <S.TechCardImage src={MarimbaImage} />

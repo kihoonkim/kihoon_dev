@@ -10,6 +10,7 @@ import Portfolios from "./components/contents/Portfolios";
 import Experience from "./components/contents/Experience";
 import {PURPLE} from "./constants/colors";
 import Architecture from "./components/contents/Architecture";
+import Presentations from "./components/contents/Presentations";
 
 const S = {
   Container: styled.div`
@@ -92,6 +93,10 @@ function App() {
 
         <S.StaticContainer>
           <Architecture />
+        </S.StaticContainer>
+
+        <S.StaticContainer>
+          <Presentations />
         </S.StaticContainer>
       </S.MainContainer>
     </S.Container>

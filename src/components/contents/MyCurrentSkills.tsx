@@ -40,15 +40,25 @@ function MyCurrentSkills() {
   return (
     <S.Container>
       <S.LeftContainer>
-        <Text type={"H3"} text={"Current Skills"} weight={800} />
-        <Text type={"B1"} text={"어쩌구 저쩌구.."} />
+        <Text type={"H3"} text={"현재 기술 스택"} weight={800} />
+        <Text type={"B1"} text={" "} />
+        <Text type={"B1"} text={
+          "PM, Designer 와 끊임 없이 대화하며 사용자의 문제를 해결 하는 것에 보람을 느끼고, " +
+          "동료 개발자들과 제품을 개발해 나가며 함께 성장하는 것에 즐거움을 느낍니다."
+        }/>
+        <Text type={"B3"} text={" "} />
+        <Text type={"B1"} text={"그렇기 때문에 하나의 제품을 front, backend 구분 없이 처음부터 끝까지 만드는 것을 좋아합니다."} />
+
+        <Text type={"B3"} text={" "} />
+        <Text type={"B1"} text={"현재 제가 가장 많이 사용 하는 기술 스택은"} />
+        <Text type={"B1"} text={"Typescript, React(F/E), Nest.js(B/E), MongoDB, AWS(ECS, S3) 입니다."} />
       </S.LeftContainer>
       <S.RightContainer>
         <S.TechContainer>
           <S.TechCard>
-            <S.TechCardItem><Text type={"B2"} text={"React.js"}/></S.TechCardItem>
-            <S.TechCardItem><Text type={"B2"} text={"Next.js"}/></S.TechCardItem>
-            <S.TechCardItem><Text type={"B2"} text={"Typescript"}/></S.TechCardItem>
+            <S.TechCardItem><Text type={"B2"} text={"React.js"} weight={800}/></S.TechCardItem>
+            <S.TechCardItem><Text type={"B2"} text={"Next.js"} /></S.TechCardItem>
+            <S.TechCardItem><Text type={"B2"} text={"Typescript"} weight={800}/></S.TechCardItem>
           </S.TechCard>
           <Text type={"B1"} text={"Web"} weight={600} />
         </S.TechContainer>
@@ -65,7 +75,7 @@ function MyCurrentSkills() {
         <S.TechContainer>
           <S.TechCard>
             <S.TechCardItem><Text type={"B2"} text={"Node.js"}/></S.TechCardItem>
-            <S.TechCardItem><Text type={"B2"} text={"Nest.js"}/></S.TechCardItem>
+            <S.TechCardItem><Text type={"B2"} text={"Nest.js"} weight={800} /></S.TechCardItem>
             <S.TechCardItem><Text type={"B2"} text={"MSA"}/></S.TechCardItem>
           </S.TechCard>
           <Text type={"B1"} text={"B/E"} weight={600} />
@@ -73,7 +83,7 @@ function MyCurrentSkills() {
 
         <S.TechContainer>
           <S.TechCard>
-            <S.TechCardItem><Text type={"B2"} text={"Mongodb"}/></S.TechCardItem>
+            <S.TechCardItem><Text type={"B2"} text={"Mongodb"} weight={800} /></S.TechCardItem>
             <S.TechCardItem><Text type={"B2"} text={"Mysql"}/></S.TechCardItem>
             <S.TechCardItem><Text type={"B2"} text={"Redis"}/></S.TechCardItem>
           </S.TechCard>
@@ -82,8 +92,8 @@ function MyCurrentSkills() {
 
         <S.TechContainer>
           <S.TechCard>
-            <S.TechCardItem><Text type={"B2"} text={"Git"}/></S.TechCardItem>
-            <S.TechCardItem><Text type={"B2"} text={"Github Action"}/></S.TechCardItem>
+            <S.TechCardItem><Text type={"B2"} text={"Git"} /></S.TechCardItem>
+            <S.TechCardItem><Text type={"B2"} text={"Github Action"} weight={800} /></S.TechCardItem>
             <S.TechCardItem><Text type={"B2"} text={"Jenkins"}/></S.TechCardItem>
           </S.TechCard>
           <Text type={"B1"} text={"CI/CD"} weight={600} />
@@ -91,7 +101,7 @@ function MyCurrentSkills() {
 
         <S.TechContainer>
           <S.TechCard>
-            <S.TechCardItem><Text type={"B2"} text={"ECS"}/></S.TechCardItem>
+            <S.TechCardItem><Text type={"B2"} text={"ECS"} weight={800} /></S.TechCardItem>
             <S.TechCardItem><Text type={"B2"} text={"S3"}/></S.TechCardItem>
             <S.TechCardItem><Text type={"B2"} text={"DocDB"}/></S.TechCardItem>
             <S.TechCardItem><Text type={"B2"} text={"..."}/></S.TechCardItem>

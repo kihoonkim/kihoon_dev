@@ -102,7 +102,7 @@ function PersonalInformation() {
       </S.ProfileCard>
 
       <S.ShortDivider />
-      <Text type={"H1"} text={"bla bla bal"} />
+      <Text type={"H1"} text={"Hello World!"} />
     </S.Container>
   );
 }
