@@ -1,31 +1,20 @@
 import React from 'react';
 import styled from "styled-components";
-import ProfileImage from '../../assets/profile.jpeg'
+import MainImage from '../../assets/main-image.webp'
 import Text from "../common/Text";
-import {PURPLE} from "../../constants/colors";
 import EmailLink from "../common/EmailLink";
 
 const S = {
   Container: styled.div`
     width: 100%;
     display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 5rem 0;
   `,
   LeftContainer: styled.div`
     width: 60%;
-    height: 50%;
+    height: 100%;
     display: flex;
     flex-direction: column;
     gap: 3rem;
-  `,
-  RightContainer: styled.div`
-    width: 40%;
-    height: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
   `,
   Greeting: styled.div``,
   Title: styled.div``,
@@ -40,21 +29,29 @@ const S = {
     flex-direction: column;
     gap: 0.5rem;
   `,
-  ProfileContainer: styled.div`
-    width: 15rem;
-    height: 15rem;
-    border-radius: 50%;
-    overflow: hidden;
-  `,
-  ProfileImage: styled.img`
-    width: 100%;
-    height: 100%;
-  `,
   ShortDivider: styled.div`
     width: 5rem;
     height: 0.125rem;
-    border-bottom: white solid 0.125rem;
+    border-bottom: rebeccapurple solid 0.125rem;
     margin-bottom: 1rem;
+  `,
+  RightContainer: styled.div`
+    width: 40%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+  `,
+  ProfileContainer: styled.div`
+    position: relative;
+    width: 30rem;
+    height: 30rem;
+  `,
+  ProfileImage: styled.img`
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
   `
 }
 function AboutMe() {
@@ -63,7 +60,7 @@ function AboutMe() {
       <S.LeftContainer>
         <S.Greeting>
           <Text type="H3" text={"안녕하세요."} />
-          <Text type="H1" text={"김기훈"} weight={800} color={PURPLE['500']} hoverColor={PURPLE['500']} />
+          <Text type="H1" text={"김기훈"} weight={800} />
           <Text type="H3" text={" 입니다."} />
         </S.Greeting>
         <S.Title>
@@ -78,9 +75,9 @@ function AboutMe() {
         <S.Contact>
           <S.ShortDivider />
           <div>
-            <Text type="B2" text={"채용 제안"} weight={800} />
+            <Text type="B2" text={"‍채용 제안"} weight={800} />
             <Text type="B2" text={" 및 "} />
-            <Text type="B2" text={"커피챗"} weight={800} />
+            <Text type="B2" text={"커피 챗"} weight={800} />
             <Text type="B2" text={"은 아래 "} />
             <Text type="B2" text={"Email"} weight={800} />
             <Text type="B2" text={" 로 연락해 주세요"} />
@@ -88,9 +85,10 @@ function AboutMe() {
           <EmailLink type="B1" email="kihoon.dev@gmail.com" />
         </S.Contact>
       </S.LeftContainer>
+
       <S.RightContainer>
         <S.ProfileContainer>
-          <S.ProfileImage src={ProfileImage}/>
+          <S.ProfileImage src={MainImage}/>
         </S.ProfileContainer>
       </S.RightContainer>
     </S.Container>

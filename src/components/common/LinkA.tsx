@@ -11,15 +11,15 @@ const S = {
 
 interface AppProps {
   type: FontType
-  email: string
+  link: string
 }
 
-function EmailLink({ type, email }: AppProps) {
+function LinkA({ type, link }: AppProps) {
   return (
-    <S.Container href={`mailto:${email}`}>
-      <Text type={type} text={email} hoverColor={BLUE['600']} />
+    <S.Container href={link} target={"_blank"}>
+      <Text type={type} text={link} hoverColor={BLUE['600']} />
     </S.Container>
   );
 }
 
-export default EmailLink;
+export default LinkA;

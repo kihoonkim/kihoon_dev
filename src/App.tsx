@@ -4,6 +4,12 @@ import styled from "styled-components";
 import AboutMe from "./components/contents/AboutMe";
 import MyCurrentSkills from "./components/contents/MyCurrentSkills";
 import {PC_S_MAX_WIDTH} from "./constants/breakpoints";
+import PersonalInformation from "./components/contents/PersonalInformation";
+import MyExperiencedSkills from "./components/contents/MyExperiencedSkills";
+import Portfolios from "./components/contents/Portfolios";
+import Experience from "./components/contents/Experience";
+import {PURPLE} from "./constants/colors";
+import Architecture from "./components/contents/Architecture";
 
 const S = {
   Container: styled.div`
@@ -21,15 +27,28 @@ const S = {
     width: calc(100% - 4rem);
     height: 5rem;
     padding: 0 2rem;
+    background-color: white;
+    z-index: 1000;
   `,
   MainContainer: styled.div`
-    width: calc(100% - 10rem);
-    max-width: ${PC_S_MAX_WIDTH}px;
-    padding: 5rem;
+    width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
+    margin-top: 5rem;
+  `,
+  WideContainer: styled.div<{ bgColor: string }>`
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    background-color: ${({bgColor}) => bgColor || 'white'};
+  `,
+  StaticContainer: styled.div`
+    width: calc(100% - 10rem);
+    max-width: ${PC_S_MAX_WIDTH}px;
+    padding: 5rem;
   `
 }
 function App() {
@@ -41,8 +60,39 @@ function App() {
       </S.HeaderContainer>
 
       <S.MainContainer>
-        <AboutMe />
-        <MyCurrentSkills />
+        <S.WideContainer bgColor={PURPLE['200']}>
+          <S.StaticContainer>
+            <AboutMe />
+          </S.StaticContainer>
+        </S.WideContainer>
+
+        <S.StaticContainer>
+          <PersonalInformation />
+        </S.StaticContainer>
+
+        <S.WideContainer bgColor={PURPLE['100']}>
+          <S.StaticContainer>
+            <MyCurrentSkills />
+          </S.StaticContainer>
+        </S.WideContainer>
+
+        <S.StaticContainer>
+          <MyExperiencedSkills />
+        </S.StaticContainer>
+
+        <S.StaticContainer>
+          <Experience />
+        </S.StaticContainer>
+
+        <S.WideContainer bgColor={PURPLE['100']}>
+          <S.StaticContainer>
+            <Portfolios />
+          </S.StaticContainer>
+        </S.WideContainer>
+
+        <S.StaticContainer>
+          <Architecture />
+        </S.StaticContainer>
       </S.MainContainer>
     </S.Container>
   )

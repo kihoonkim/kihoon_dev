@@ -22,7 +22,8 @@ const S = {
   `,
 };
 
-export type FontType = 'H0' | 'H1' | 'H2' | 'B1' | 'B2'
+export type FontType = 'H0' | 'H1' | 'H2' | 'H3' | 'B1' | 'B2' | 'B3'
+
 const FontStyle = {
   H0: {
     lineHeight: '120%',
@@ -48,6 +49,10 @@ const FontStyle = {
     lineHeight: '160%',
     size: '1rem',
   },
+  B3: {
+    lineHeight: '160%',
+    size: '0.75rem',
+  },
 }
 interface AppProps {
   type: FontType
@@ -57,7 +62,7 @@ interface AppProps {
   hoverColor?: string
 }
 
-function Text({ type, text, weight = 400, color = 'white', hoverColor = 'white' }: AppProps) {
+function Text({ type, text, weight = 400, color = 'black', hoverColor = 'black' }: AppProps) {
   return (
     <S.Container {...FontStyle[type]} weight={weight} color={color} hoverColor={hoverColor}>{text}</S.Container>
   );
