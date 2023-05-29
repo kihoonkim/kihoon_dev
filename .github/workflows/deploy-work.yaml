@@ -6,7 +6,7 @@ jobs:
   deploy_next_app:
     runs-on: ubuntu-latest
     env:
-      S3_BUCKET: kihoon-dev-web
+      S3_BUCKET: kihoon.dev
       CF_DISTRIBUTION_ID: E3PWT3ZABC49K8
     steps:
       - name: Checkout source code
@@ -14,7 +14,7 @@ jobs:
 
       - name: Install Dependencies
         run: npm install
-      - name: React Build & Export (generate static html)
+      - name: Next Build & Export (generate static html)
         run: npm run build
 
       - name: Configure AWS Credentials
@@ -27,10 +27,10 @@ jobs:
       - name: Delete previous deployed files
         run: |
           aws s3 rm --recursive s3://${{ env.S3_BUCKET }}
-      - name: Deploy Next.js App
+      - name: Deploy React.js App
         run: |
-          aws s3 cp --recursive out s3://${{ env.S3_BUCKET }}
-      - name: Invalidate cloutfront
+          aws s3 cp --recursive dist s3://${{ env.S3_BUCKET }}
+      - name: Invalidate cloudfront
         run: |
           aws cloudfront create-invalidation \
             --distribution-id ${{ env.CF_DISTRIBUTION_ID }} \
