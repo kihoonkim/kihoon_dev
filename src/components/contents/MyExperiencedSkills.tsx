@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import Text from "../common/Text";
 import SkillImage from '../../assets/skill.jpg'
+import {TABLET_S_MAX_WIDTH} from "../../constants/breakpoints";
 
 const S = {
   Container: styled.div`
@@ -13,12 +14,20 @@ const S = {
     display: flex;
   `,
   List: styled.div`
-    width: 50%;
+    width: 65%;
     display: flex;
     flex-direction: column;
+
+    @media(max-width: ${TABLET_S_MAX_WIDTH}px) {
+      width: 100%;
+    }
   `,
   Image: styled.img`
     width: 35%;
+
+    @media(max-width: ${TABLET_S_MAX_WIDTH}px) {
+      display: none;
+    }
   `
 }
 function MyExperiencedSkills() {

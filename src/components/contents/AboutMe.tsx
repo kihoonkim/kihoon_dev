@@ -2,6 +2,7 @@ import styled from "styled-components";
 import MainImage from '../../assets/main-image.webp'
 import Text from "../common/Text";
 import EmailLink from "../common/EmailLink";
+import {TABLET_S_MAX_WIDTH} from "../../constants/breakpoints";
 
 const S = {
   Container: styled.div`
@@ -14,6 +15,10 @@ const S = {
     display: flex;
     flex-direction: column;
     gap: 3rem;
+    
+    @media(max-width: ${TABLET_S_MAX_WIDTH}px) {
+      width: 100%;
+    }
   `,
   Greeting: styled.div``,
   Title: styled.div``,
@@ -40,6 +45,10 @@ const S = {
     display: flex;
     justify-content: center;
     align-items: flex-end;
+
+    @media(max-width: ${TABLET_S_MAX_WIDTH}px) {
+      display: none;
+    }
   `,
   ProfileContainer: styled.div`
     position: relative;
@@ -59,13 +68,13 @@ function AboutMe() {
       <S.LeftContainer>
         <S.Greeting>
           <Text type="H3" text={"안녕하세요."} />
-          <Text type="H1" text={"김기훈"} weight={800} />
-          <Text type="H3" text={" 입니다."} />
+          <Text type="H1" text={" 김기훈 "} weight={800} />
+          <Text type="H3" text={"입니다."} />
         </S.Greeting>
         <S.Title>
           <Text type="H3" text={"저는 "} />
-          <Text type="H2" text={"Fullstack Developer"} weight={800} />
-          <Text type="H3" text={" 입니다."} />
+          <Text type="H2" text={"Fullstack Developer "} weight={800} />
+          <Text type="H3" text={"입니다."} />
         </S.Title>
         <S.Description>
           <Text type="B2" text={"사용자에게 가치있는 기능을 빠르게 전달하는 것을 가장 중요하게 생각합니다."} />

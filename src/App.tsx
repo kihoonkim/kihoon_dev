@@ -3,7 +3,7 @@ import Header from "./components/top/Header";
 import styled from "styled-components";
 import AboutMe from "./components/contents/AboutMe";
 import MyCurrentSkills from "./components/contents/MyCurrentSkills";
-import {PC_S_MAX_WIDTH} from "./constants/breakpoints";
+import {PC_S_MAX_WIDTH, TABLET_S_MAX_WIDTH} from "./constants/breakpoints";
 import PersonalInformation from "./components/contents/PersonalInformation";
 import MyExperiencedSkills from "./components/contents/MyExperiencedSkills";
 import Portfolios from "./components/contents/Portfolios";
@@ -50,6 +50,11 @@ const S = {
     width: calc(100% - 10rem);
     max-width: ${PC_S_MAX_WIDTH}px;
     padding: 5rem;
+
+    @media(max-width: ${TABLET_S_MAX_WIDTH}px) {
+      width: calc(100% - 4rem);
+      padding: 4rem 2rem;
+    }
   `
 }
 function App() {

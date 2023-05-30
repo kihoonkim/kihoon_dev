@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import Text from "../common/Text";
+import {PHONE_MAX_WIDTH, TABLET_L_MAX_WIDTH} from "../../constants/breakpoints";
 
 
 const S = {
@@ -7,12 +8,19 @@ const S = {
     width: 100%;
     display: flex;
     gap: 2rem;
-    padding: 1rem;
+
+    @media(max-width: ${TABLET_L_MAX_WIDTH}px) {
+      flex-direction: column;
+    }
   `,
   LeftContainer: styled.div`
     width: 40%;
     display: flex;
     flex-direction: column;
+
+    @media(max-width: ${TABLET_L_MAX_WIDTH}px) {
+      width: 100%;
+    }
   `,
   RightContainer: styled.div`
     width: 60%;
@@ -20,9 +28,13 @@ const S = {
     flex-wrap: wrap;
     gap: 1rem;
     justify-content: flex-start;
+
+    @media(max-width: ${TABLET_L_MAX_WIDTH}px) {
+      width: 100%;
+    }
   `,
   TechContainer: styled.div`
-    width: 160px;
+    width: 10rem;
     height: 10rem;
     display: flex;
     flex-direction: column;
@@ -30,6 +42,15 @@ const S = {
     box-shadow: 0 0 1rem rgba(0, 0, 0, 0.1);
     border-radius: 0.5rem;
     padding: 1rem;
+    :hover {
+      transform: scale(1.01);
+    }
+    @media(max-width: ${TABLET_L_MAX_WIDTH}px) {
+      width: 8rem;
+    }
+    @media(max-width: ${PHONE_MAX_WIDTH}px) {
+      width: 100%;
+    }
   `,
   TechCard: styled.div`
     height: 100%;

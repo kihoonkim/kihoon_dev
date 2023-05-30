@@ -11,6 +11,7 @@ const S = {
   Container: styled.div`
     display: inline-block;
     white-space: pre-wrap;
+    word-break: keep-all;
     font-size: ${({size}: StyledProps) => size};
     font-weight: ${({weight}: StyledProps) => weight};
     line-height: ${({lineHeight}: StyledProps) => lineHeight};

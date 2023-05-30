@@ -3,6 +3,7 @@ import ProfileImage from '../../assets/profile.jpeg'
 import Text from "../common/Text";
 import LinkA from "../common/LinkA";
 import EmailLink from "../common/EmailLink";
+import {TABLET_S_MAX_WIDTH} from "../../constants/breakpoints";
 const S = {
   Container: styled.div`
     display: flex;
@@ -20,14 +21,29 @@ const S = {
     border-radius: 0.5rem;
     overflow: hidden;
     box-shadow: 0 0 1rem rgba(0, 0, 0, 0.1);
+    
+    @media(max-width: ${TABLET_S_MAX_WIDTH}px) {
+      flex-direction: column;
+      height: fit-content;
+    }
   `,
   ImageContainer: styled.div`
     width: 40%;
     height: 100%;
+    background-color: black;
+
+    @media(max-width: ${TABLET_S_MAX_WIDTH}px) {
+      width: 100%;
+      height: 22rem;
+    }
   `,
   Image: styled.img`
     width: 100%;
     height: 100%;
+    object-fit: cover;
+    @media(max-width: ${TABLET_S_MAX_WIDTH}px) {
+      object-fit: contain;
+    }
   `,
   InformationContainer: styled.div`
     width: 60%;
@@ -37,6 +53,10 @@ const S = {
     align-items: flex-start;
     padding: 2rem;
     background-color: white;
+
+    @media(max-width: ${TABLET_S_MAX_WIDTH}px) {
+      width: calc(100% - 4rem);
+    }
   `,
   Title: styled.div`
     padding-bottom: 0.5rem;

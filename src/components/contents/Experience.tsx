@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import Text from "../common/Text";
 import {PURPLE} from "../../constants/colors";
+import {TABLET_S_MAX_WIDTH} from "../../constants/breakpoints";
 
 
 const S = {
@@ -15,28 +16,32 @@ const S = {
     display: flex;
     gap: 2rem;
     justify-content: center;
+
+    @media(max-width: ${TABLET_S_MAX_WIDTH}px) {
+      flex-direction: column;
+    }
   `,
   CardContainer: styled.div`
-    width: 50%;
+    width: calc(50% - 4rem);
     display: flex;
     flex-direction: column;
-    background-color: white;
+    gap: 0.5rem;
     border: ${PURPLE['600']} solid 0.125rem;
+    border-radius: 0.5rem;
+    background-color: white;
     padding: 2rem;
-    gap: 0.5rem
-  `,
-  ShortDivider: styled.div`
-    width: 7rem;
-    height: 0.25rem;
-    border-bottom: rebeccapurple solid 0.25rem;
-    margin-bottom: 7rem;
-    align-self: center;
+
+    :hover {
+      background-color: ${PURPLE['50']};
+    }
+    @media(max-width: ${TABLET_S_MAX_WIDTH}px) {
+      width: calc(100% - 4rem);
+    }
   `,
 }
 function Experience() {
   return (
     <S.Container>
-      <S.ShortDivider />
       <Text type={"H3"} text={"경력"} weight={800} />
 
       <S.CardList>
@@ -55,7 +60,7 @@ function Experience() {
           <Text type={"B2"} text={"11.08 ~ 21.10 : 10년 3개월"} />
           <Text type={"B2"} text={"Agile Core Team, SW Engineering Team"} weight={800} />
           <Text type={"B2"} text={"Developer, Architect"} />
-          <Text type={"B2"} text={"Marimba, Digital signage, "} />
+          <Text type={"B2"} text={"Marimba, Digital signage, Allianz Life"} />
         </S.CardContainer>
       </S.CardList>
     </S.Container>

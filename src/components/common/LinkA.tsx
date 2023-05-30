@@ -11,12 +11,13 @@ const S = {
 interface AppProps {
   type: FontType
   link: string
+  text?: string
 }
 
-function LinkA({ type, link }: AppProps) {
+function LinkA({ type, text, link }: AppProps) {
   return (
     <S.Container href={link} target={"_blank"}>
-      <Text type={type} text={link} hoverColor={BLUE['600']} />
+      <Text type={type} text={text || link} hoverColor={BLUE['600']} />
     </S.Container>
   );
 }

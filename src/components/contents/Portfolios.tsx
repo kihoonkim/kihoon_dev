@@ -4,6 +4,7 @@ import LinkA from "../common/LinkA";
 import MarimbaImage from '../../assets/marimba.png'
 import BuffaiImage from '../../assets/buffai.jpeg'
 import WezGalleryImage from '../../assets/wez-gallery.png'
+import {PHONE_MAX_WIDTH} from "../../constants/breakpoints";
 
 const S = {
   Container: styled.div`
@@ -26,6 +27,15 @@ const S = {
     border-radius: 0.5rem;
     overflow: hidden;
     background-color: white;
+
+    cursor: pointer;
+    :hover {
+      transform: scale(1.01);
+    }
+    
+    @media(max-width: ${PHONE_MAX_WIDTH}px) {
+      width: 100%;
+    }
   `,
   TechCardTitle: styled.div`
     display: flex;
@@ -41,56 +51,38 @@ const S = {
   TechCardImage: styled.img`
     width: 100%;
     height: 10rem;
+
+    @media(max-width: ${PHONE_MAX_WIDTH}px) {
+      height: 12rem;
+    }
   `,
 }
 function Portfolios() {
+  const list = [
+    {category: 'AI', name: 'BuffAI', link: 'https://buffai.io', image: BuffaiImage},
+    {category: 'Web', name: 'Marimba', link: 'https://marimba.team', image: MarimbaImage},
+    {category: 'Web3', name: 'Wez NFT Gallery', link: 'https://we-z.xyz', image: WezGalleryImage},
+    {category: 'Web', name: 'Paperlog', link: 'https://paperlog.kihoon.dev', image: ''},
+  ]
   return (
     <S.Container>
       <Text type={"H3"} text={"프로젝트"} weight={800} />
       <S.PortfolioContainer>
-        <S.TechContainer>
-          <S.TechCardImage src={MarimbaImage} />
-          <S.TechCardTitle>
-            <Text type={"B2"} text={"Web"} weight={900} />
-            <Text type={"B2"} text={"Marimba"}/>
-          </S.TechCardTitle>
-          <S.TechCardText>
-            <LinkA type={"B2"} link={"https://marimba.team"}/>
-          </S.TechCardText>
-        </S.TechContainer>
+        {
+          list.map((item) => (
+            <S.TechContainer>
+              <S.TechCardImage src={item.image}/>
+              <S.TechCardTitle>
+                <Text type={"B2"} text={item.category} weight={900} />
+                <Text type={"B2"} text={item.name}/>
+              </S.TechCardTitle>
+              <S.TechCardText>
+                <LinkA type={"B2"} link={item.link}/>
+              </S.TechCardText>
+            </S.TechContainer>
+          ))
+        }
 
-        <S.TechContainer>
-          <S.TechCardImage src={BuffaiImage} />
-          <S.TechCardTitle>
-            <Text type={"B2"} text={"AI"} weight={900} />
-            <Text type={"B2"} text={"BuffAI"}/>
-          </S.TechCardTitle>
-          <S.TechCardText>
-            <LinkA type={"B2"} link={"https://buffai.io"}/>
-          </S.TechCardText>
-        </S.TechContainer>
-
-        <S.TechContainer>
-          <S.TechCardImage />
-          <S.TechCardTitle>
-            <Text type={"B2"} text={"Web"} weight={900} />
-            <Text type={"B2"} text={"Paperlog"}/>
-          </S.TechCardTitle>
-          <S.TechCardText>
-            <LinkA type={"B2"} link={"https://paperlog.kihoon.dev"}/>
-          </S.TechCardText>
-        </S.TechContainer>
-
-        <S.TechContainer>
-          <S.TechCardImage src={WezGalleryImage} />
-          <S.TechCardTitle>
-            <Text type={"B2"} text={"Web3"} weight={900} />
-            <Text type={"B2"} text={"Wez Gallery"} />
-          </S.TechCardTitle>
-          <S.TechCardText>
-            <LinkA type={"B2"} link={"https://we-z.xyz"}/>
-          </S.TechCardText>
-        </S.TechContainer>
       </S.PortfolioContainer>
     </S.Container>
   );
