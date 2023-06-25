@@ -1,12 +1,12 @@
-import styled from 'styled-components';
-import Text, {FontType} from "./Text";
-import {BLUE} from "../../constants/colors";
+import styled from 'styled-components'
+import Text, { FontType } from './Text'
+import { BLUE } from '../../constants/colors'
 
 const S = {
   Container: styled.a`
     width: fit-content;
   `,
-};
+}
 
 interface AppProps {
   type: FontType
@@ -18,7 +18,7 @@ function EmailLink({ type, email }: AppProps) {
     <S.Container href={`mailto:${email}`}>
       <Text type={type} text={email} hoverColor={BLUE['600']} />
     </S.Container>
-  );
+  )
 }
 
-export default EmailLink;
+export default EmailLink

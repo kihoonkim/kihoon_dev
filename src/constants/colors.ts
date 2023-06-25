@@ -1,6 +1,6 @@
-export const WHITE = '#ffffff';
-export const BLACK = '#101010';
-export const RED = '#E50045';
+export const WHITE = '#ffffff'
+export const BLACK = '#101010'
+export const RED = '#E50045'
 
 export const GRAY = {
   50: '#F9FAFB',
@@ -9,7 +9,7 @@ export const GRAY = {
   300: '#C4CBD5',
   500: '#919AAB',
   700: '#636F81',
-};
+}
 
 export const BLUE = {
   50: '#EDF3FF',
@@ -20,7 +20,7 @@ export const BLUE = {
   700: '#0B23A4',
   800: '#152160',
   900: '#171E40',
-};
+}
 
 export const PURPLE = {
   50: `#F9F8FF`,
@@ -31,16 +31,16 @@ export const PURPLE = {
   600: `#532BC4`,
   700: `#391896`,
   800: `#2C0C87`,
-};
+}
 
 export const GREEN = {
   100: `#E1F6F3`,
   200: `#C6EDE7`,
   600: `#00B6A0`,
-};
+}
 
 export const LIGHT_BLUE = {
   100: `#DFF2FC`,
   200: `#B9E1F6`,
   600: `#109BEA`,
-};
+}

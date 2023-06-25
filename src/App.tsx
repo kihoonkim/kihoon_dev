@@ -1,16 +1,16 @@
 import './App.css'
-import Header from "./components/top/Header";
-import styled from "styled-components";
-import AboutMe from "./components/contents/AboutMe";
-import MyCurrentSkills from "./components/contents/MyCurrentSkills";
-import {PC_S_MAX_WIDTH, TABLET_S_MAX_WIDTH} from "./constants/breakpoints";
-import PersonalInformation from "./components/contents/PersonalInformation";
-import MyExperiencedSkills from "./components/contents/MyExperiencedSkills";
-import Portfolios from "./components/contents/Portfolios";
-import Experience from "./components/contents/Experience";
-import {PURPLE} from "./constants/colors";
-import Architecture from "./components/contents/Architecture";
-import Presentations from "./components/contents/Presentations";
+import Header from './components/top/Header'
+import styled from 'styled-components'
+import AboutMe from './components/contents/AboutMe'
+import MyCurrentSkills from './components/contents/MyCurrentSkills'
+import { PC_S_MAX_WIDTH, TABLET_S_MAX_WIDTH } from './constants/breakpoints'
+import PersonalInformation from './components/contents/PersonalInformation'
+import MyExperiencedSkills from './components/contents/MyExperiencedSkills'
+import Portfolios from './components/contents/Portfolios'
+import Experience from './components/contents/Experience'
+import { PURPLE } from './constants/colors'
+import Architecture from './components/contents/Architecture'
+import Presentations from './components/contents/Presentations'
 
 const S = {
   Container: styled.div`
@@ -44,21 +44,20 @@ const S = {
     display: flex;
     justify-content: center;
     align-items: flex-start;
-    background-color: ${({bgColor}) => bgColor || 'white'};
+    background-color: ${({ bgColor }) => bgColor || 'white'};
   `,
   StaticContainer: styled.div`
     width: calc(100% - 10rem);
     max-width: ${PC_S_MAX_WIDTH}px;
     padding: 5rem;
 
-    @media(max-width: ${TABLET_S_MAX_WIDTH}px) {
+    @media (max-width: ${TABLET_S_MAX_WIDTH}px) {
       width: calc(100% - 4rem);
       padding: 4rem 2rem;
     }
-  `
+  `,
 }
 function App() {
-
   return (
     <S.Container>
       <S.HeaderContainer>

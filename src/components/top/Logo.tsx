@@ -1,5 +1,5 @@
-import styled from 'styled-components';
-import {PURPLE} from "../../constants/colors";
+import styled from 'styled-components'
+import { PURPLE } from '../../constants/colors'
 
 const S = {
   Container: styled.div`
@@ -13,12 +13,10 @@ const S = {
       border-bottom: 1px solid ${PURPLE['500']};
     }
   `,
-};
-
-function Logo() {
-  return (
-    <S.Container>DEV:KI</S.Container>
-  );
 }
 
-export default Logo;
+function Logo() {
+  return <S.Container>DEV:KI</S.Container>
+}
+
+export default Logo

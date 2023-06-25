@@ -1,5 +1,5 @@
-import Logo from "./Logo";
-import styled from "styled-components";
+import Logo from './Logo'
+import styled from 'styled-components'
 
 const S = {
   Container: styled.div`
@@ -7,14 +7,14 @@ const S = {
     height: 100%;
     display: flex;
     align-items: center;
-  `
+  `,
 }
 function Header() {
   return (
     <S.Container>
-      <Logo/>
+      <Logo />
     </S.Container>
-  );
+  )
 }
 
-export default Header;
+export default Header

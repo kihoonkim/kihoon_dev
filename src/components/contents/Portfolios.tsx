@@ -1,10 +1,10 @@
-import styled from "styled-components";
-import Text from "../common/Text";
-import LinkA from "../common/LinkA";
+import styled from 'styled-components'
+import Text from '../common/Text'
+import LinkA from '../common/LinkA'
 import MarimbaImage from '../../assets/marimba.png'
 import BuffaiImage from '../../assets/buffai.jpeg'
 import WezGalleryImage from '../../assets/wez-gallery.png'
-import {PHONE_MAX_WIDTH} from "../../constants/breakpoints";
+import { PHONE_MAX_WIDTH } from '../../constants/breakpoints'
 
 const S = {
   Container: styled.div`
@@ -32,8 +32,8 @@ const S = {
     :hover {
       transform: scale(1.01);
     }
-    
-    @media(max-width: ${PHONE_MAX_WIDTH}px) {
+
+    @media (max-width: ${PHONE_MAX_WIDTH}px) {
       width: 100%;
     }
   `,
@@ -52,40 +52,37 @@ const S = {
     width: 100%;
     height: 10rem;
 
-    @media(max-width: ${PHONE_MAX_WIDTH}px) {
+    @media (max-width: ${PHONE_MAX_WIDTH}px) {
       height: 12rem;
     }
   `,
 }
 function Portfolios() {
   const list = [
-    {category: 'AI', name: 'BuffAI', link: 'https://buffai.io', image: BuffaiImage},
-    {category: 'Web', name: 'Marimba', link: 'https://marimba.team', image: MarimbaImage},
-    {category: 'Web3', name: 'Wez NFT Gallery', link: 'https://we-z.xyz', image: WezGalleryImage},
-    {category: 'Web', name: 'Paperlog', link: 'https://paperlog.kihoon.dev', image: ''},
+    { category: 'AI', name: 'BuffAI', link: 'https://buffai.io', image: BuffaiImage },
+    { category: 'Web', name: 'Marimba', link: 'https://marimba.team', image: MarimbaImage },
+    { category: 'Web3', name: 'Wez NFT Gallery', link: 'https://we-z.xyz', image: WezGalleryImage },
+    { category: 'Web', name: 'Paperlog', link: 'https://paperlog.kihoon.dev', image: '' },
   ]
   return (
     <S.Container>
-      <Text type={"H3"} text={"프로젝트"} weight={800} />
+      <Text type={'H3'} text={'프로젝트'} weight={800} />
       <S.PortfolioContainer>
-        {
-          list.map((item) => (
-            <S.TechContainer>
-              <S.TechCardImage src={item.image}/>
-              <S.TechCardTitle>
-                <Text type={"B2"} text={item.category} weight={900} />
-                <Text type={"B2"} text={item.name}/>
-              </S.TechCardTitle>
-              <S.TechCardText>
-                <LinkA type={"B2"} link={item.link}/>
-              </S.TechCardText>
-            </S.TechContainer>
-          ))
-        }
-
+        {list.map((item) => (
+          <S.TechContainer>
+            <S.TechCardImage src={item.image} />
+            <S.TechCardTitle>
+              <Text type={'B2'} text={item.category} weight={900} />
+              <Text type={'B2'} text={item.name} />
+            </S.TechCardTitle>
+            <S.TechCardText>
+              <LinkA type={'B2'} link={item.link} />
+            </S.TechCardText>
+          </S.TechContainer>
+        ))}
       </S.PortfolioContainer>
     </S.Container>
-  );
+  )
 }
 
-export default Portfolios;
+export default Portfolios

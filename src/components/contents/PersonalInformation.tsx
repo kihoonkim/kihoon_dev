@@ -1,9 +1,9 @@
-import styled from "styled-components";
+import styled from 'styled-components'
 import ProfileImage from '../../assets/profile.jpeg'
-import Text from "../common/Text";
-import LinkA from "../common/LinkA";
-import EmailLink from "../common/EmailLink";
-import {TABLET_S_MAX_WIDTH} from "../../constants/breakpoints";
+import Text from '../common/Text'
+import LinkA from '../common/LinkA'
+import EmailLink from '../common/EmailLink'
+import { TABLET_S_MAX_WIDTH } from '../../constants/breakpoints'
 const S = {
   Container: styled.div`
     display: flex;
@@ -21,8 +21,8 @@ const S = {
     border-radius: 0.5rem;
     overflow: hidden;
     box-shadow: 0 0 1rem rgba(0, 0, 0, 0.1);
-    
-    @media(max-width: ${TABLET_S_MAX_WIDTH}px) {
+
+    @media (max-width: ${TABLET_S_MAX_WIDTH}px) {
       flex-direction: column;
       height: fit-content;
     }
@@ -32,7 +32,7 @@ const S = {
     height: 100%;
     background-color: black;
 
-    @media(max-width: ${TABLET_S_MAX_WIDTH}px) {
+    @media (max-width: ${TABLET_S_MAX_WIDTH}px) {
       width: 100%;
       height: 22rem;
     }
@@ -41,20 +41,20 @@ const S = {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    @media(max-width: ${TABLET_S_MAX_WIDTH}px) {
+    @media (max-width: ${TABLET_S_MAX_WIDTH}px) {
       object-fit: contain;
     }
   `,
   InformationContainer: styled.div`
     width: 60%;
-    height: calc(100% - 4rem);  
+    height: calc(100% - 4rem);
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     padding: 2rem;
     background-color: white;
 
-    @media(max-width: ${TABLET_S_MAX_WIDTH}px) {
+    @media (max-width: ${TABLET_S_MAX_WIDTH}px) {
       width: calc(100% - 4rem);
     }
   `,
@@ -82,49 +82,77 @@ function PersonalInformation() {
     <S.Container>
       <S.ProfileCard>
         <S.ImageContainer>
-          <S.Image src={ProfileImage}/>
+          <S.Image src={ProfileImage} />
         </S.ImageContainer>
 
         <S.InformationContainer>
           <S.Title>
-            <Text type={'B2'} text={"Senior Fullstack Developer"} weight={800} />
+            <Text type={'B2'} text={'Senior Fullstack Developer'} weight={800} />
           </S.Title>
 
           <S.Data>
-            <S.Label><Text type={'B3'} text={'이름'} weight={800} /></S.Label>
-            <S.Value><Text type={'B3'} text={'김기훈 (Kihoon Kim)'} /></S.Value>
+            <S.Label>
+              <Text type={'B3'} text={'이름'} weight={800} />
+            </S.Label>
+            <S.Value>
+              <Text type={'B3'} text={'김기훈 (Kihoon Kim)'} />
+            </S.Value>
           </S.Data>
           <S.Data>
-            <S.Label><Text type={'B3'} text={'닉네임'} weight={800} /></S.Label>
-            <S.Value><Text type={'B3'} text={'키 (Ki)'} /></S.Value>
+            <S.Label>
+              <Text type={'B3'} text={'닉네임'} weight={800} />
+            </S.Label>
+            <S.Value>
+              <Text type={'B3'} text={'키 (Ki)'} />
+            </S.Value>
           </S.Data>
           <S.Data>
-            <S.Label><Text type={'B3'} text={'지역'} weight={800} /></S.Label>
-            <S.Value><Text type={'B3'} text={'서울'} /></S.Value>
+            <S.Label>
+              <Text type={'B3'} text={'지역'} weight={800} />
+            </S.Label>
+            <S.Value>
+              <Text type={'B3'} text={'서울'} />
+            </S.Value>
           </S.Data>
           <S.Data>
-            <S.Label><Text type={'B3'} text={'역할'} weight={800} /></S.Label>
-            <S.Value><Text type={'B3'} text={'Developer, SRE'} /></S.Value>
+            <S.Label>
+              <Text type={'B3'} text={'역할'} weight={800} />
+            </S.Label>
+            <S.Value>
+              <Text type={'B3'} text={'Developer, SRE'} />
+            </S.Value>
           </S.Data>
           <S.Data>
-            <S.Label><Text type={'B3'} text={'이메일'} weight={800} /></S.Label>
-            <S.Value><EmailLink type={'B3'} email={'kihoon.dev@gmail.com'} /></S.Value>
+            <S.Label>
+              <Text type={'B3'} text={'이메일'} weight={800} />
+            </S.Label>
+            <S.Value>
+              <EmailLink type={'B3'} email={'kihoon.dev@gmail.com'} />
+            </S.Value>
           </S.Data>
           <S.Data>
-            <S.Label><Text type={'B3'} text={'linkedin'} weight={800} /></S.Label>
-            <S.Value><LinkA type={'B3'} link={'https://www.linkedin.com/in/kihoon-kim-4630ba13b'} /></S.Value>
+            <S.Label>
+              <Text type={'B3'} text={'linkedin'} weight={800} />
+            </S.Label>
+            <S.Value>
+              <LinkA type={'B3'} link={'https://www.linkedin.com/in/kihoon-kim-4630ba13b'} />
+            </S.Value>
           </S.Data>
           <S.Data>
-            <S.Label><Text type={'B3'} text={'github'} weight={800} /></S.Label>
-            <S.Value><LinkA type={'B3'} link={'https://github.com/kihoonkim'} /></S.Value>
+            <S.Label>
+              <Text type={'B3'} text={'github'} weight={800} />
+            </S.Label>
+            <S.Value>
+              <LinkA type={'B3'} link={'https://github.com/kihoonkim'} />
+            </S.Value>
           </S.Data>
         </S.InformationContainer>
       </S.ProfileCard>
 
       <S.ShortDivider />
-      <Text type={"H1"} text={"Hello World!"} />
+      <Text type={'H1'} text={'Hello World!'} />
     </S.Container>
-  );
+  )
 }
 
-export default PersonalInformation;
+export default PersonalInformation

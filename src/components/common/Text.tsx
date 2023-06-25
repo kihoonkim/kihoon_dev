@@ -1,26 +1,26 @@
-import styled from 'styled-components';
+import styled from 'styled-components'
 
 type StyledProps = {
-  lineHeight: string;
-  size: string;
-  weight: number;
+  lineHeight: string
+  size: string
+  weight: number
   color: string
   hoverColor: string
-};
+}
 const S = {
   Container: styled.div`
     display: inline-block;
     white-space: pre-wrap;
     word-break: keep-all;
-    font-size: ${({size}: StyledProps) => size};
-    font-weight: ${({weight}: StyledProps) => weight};
-    line-height: ${({lineHeight}: StyledProps) => lineHeight};
-    color: ${({color}: StyledProps) => color};
+    font-size: ${({ size }: StyledProps) => size};
+    font-weight: ${({ weight }: StyledProps) => weight};
+    line-height: ${({ lineHeight }: StyledProps) => lineHeight};
+    color: ${({ color }: StyledProps) => color};
     :hover {
-      color: ${({hoverColor}: StyledProps) => hoverColor};
+      color: ${({ hoverColor }: StyledProps) => hoverColor};
     }
   `,
-};
+}
 
 export type FontType = 'H0' | 'H1' | 'H2' | 'H3' | 'B1' | 'B2' | 'B3'
 
@@ -64,8 +64,10 @@ interface AppProps {
 
 function Text({ type, text, weight = 400, color = 'black', hoverColor = 'black' }: AppProps) {
   return (
-    <S.Container {...FontStyle[type]} weight={weight} color={color} hoverColor={hoverColor}>{text}</S.Container>
-  );
+    <S.Container {...FontStyle[type]} weight={weight} color={color} hoverColor={hoverColor}>
+      {text}
+    </S.Container>
+  )
 }
 
-export default Text;
+export default Text
