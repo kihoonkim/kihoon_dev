@@ -8,10 +8,10 @@ const S = {
     border-bottom: 1px solid white;
     padding: 4px;
     cursor: pointer;
-    :hover {
-      color: ${PURPLE['500']};
-      border-bottom: 1px solid ${PURPLE['500']};
-    }
+    // :hover {
+    //   color: ${PURPLE['500']};
+    //   border-bottom: 1px solid ${PURPLE['500']};
+    // }
   `,
 }
 

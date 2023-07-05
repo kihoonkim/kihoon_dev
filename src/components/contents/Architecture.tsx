@@ -1,7 +1,8 @@
 import styled from 'styled-components'
 import Text from '../common/Text'
 import BuffAiArchitectureImage from '../../assets/buffai-architecture.png'
-import { PHONE_MAX_WIDTH } from '../../constants/breakpoints'
+import { TABLET_L_MAX_WIDTH, TABLET_S_MAX_WIDTH } from '../../constants/breakpoints'
+import ContentTitle from '../common/ContentTitle'
 
 const S = {
   Container: styled.div`
@@ -12,24 +13,25 @@ const S = {
   `,
   ArchitectureList: styled.div`
     width: 100%;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 2rem;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+
+    @media (max-width: ${TABLET_L_MAX_WIDTH}px) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @media (max-width: ${TABLET_S_MAX_WIDTH}px) {
+      grid-template-columns: repeat(1, 1fr);
+    }
   `,
   ArchitectureContainer: styled.div`
     display: flex;
     flex-direction: column;
-    @media (max-width: ${PHONE_MAX_WIDTH}px) {
-      width: 100%;
-    }
   `,
   Image: styled.img`
-    width: 25rem;
-    height: 20rem;
-
-    @media (max-width: ${PHONE_MAX_WIDTH}px) {
-      width: 100%;
-    }
+    width: 100%;
+    object-fit: cover;
   `,
 }
 function Architecture() {
@@ -40,7 +42,7 @@ function Architecture() {
   ]
   return (
     <S.Container>
-      <Text type={'H3'} text={'아키텍쳐'} weight={800} />
+      <ContentTitle title={'아키텍쳐'} />
 
       <S.ArchitectureList>
         {list.map((item) => (

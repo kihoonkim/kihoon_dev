@@ -4,11 +4,9 @@ import styled from 'styled-components'
 import AboutMe from './components/contents/AboutMe'
 import MyCurrentSkills from './components/contents/MyCurrentSkills'
 import { PC_S_MAX_WIDTH, TABLET_S_MAX_WIDTH } from './constants/breakpoints'
-import PersonalInformation from './components/contents/PersonalInformation'
 import MyExperiencedSkills from './components/contents/MyExperiencedSkills'
-import Portfolios from './components/contents/Portfolios'
+import FeaturedProducts from './components/contents/FeaturedProducts'
 import Experience from './components/contents/Experience'
-import { PURPLE } from './constants/colors'
 import Architecture from './components/contents/Architecture'
 import Presentations from './components/contents/Presentations'
 
@@ -25,10 +23,8 @@ const S = {
     position: fixed;
     top: 0;
     left: 0;
-    width: calc(100% - 4rem);
+    width: 100%;
     height: 5rem;
-    padding: 0 2rem;
-    background-color: white;
     z-index: 1000;
   `,
   MainContainer: styled.div`
@@ -37,19 +33,19 @@ const S = {
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
-    margin-top: 5rem;
+    margin-top: 8rem;
   `,
   WideContainer: styled.div<{ bgColor: string }>`
     width: 100%;
     display: flex;
     justify-content: center;
     align-items: flex-start;
-    background-color: ${({ bgColor }) => bgColor || 'white'};
+    // background-color: ${({ bgColor }) => bgColor || 'white'};
   `,
   StaticContainer: styled.div`
-    width: calc(100% - 10rem);
+    width: calc(100% - 12rem);
     max-width: ${PC_S_MAX_WIDTH}px;
-    padding: 5rem;
+    padding: 6rem;
 
     @media (max-width: ${TABLET_S_MAX_WIDTH}px) {
       width: calc(100% - 4rem);
@@ -65,21 +61,21 @@ function App() {
       </S.HeaderContainer>
 
       <S.MainContainer>
-        <S.WideContainer bgColor={PURPLE['200']}>
-          <S.StaticContainer>
-            <AboutMe />
-          </S.StaticContainer>
-        </S.WideContainer>
-
         <S.StaticContainer>
-          <PersonalInformation />
+          <AboutMe />
         </S.StaticContainer>
 
-        <S.WideContainer bgColor={PURPLE['100']}>
-          <S.StaticContainer>
-            <MyCurrentSkills />
-          </S.StaticContainer>
-        </S.WideContainer>
+        <S.StaticContainer>
+          <FeaturedProducts />
+        </S.StaticContainer>
+
+        {/*<S.StaticContainer>*/}
+        {/*  <PersonalInformation />*/}
+        {/*</S.StaticContainer>*/}
+
+        <S.StaticContainer>
+          <MyCurrentSkills />
+        </S.StaticContainer>
 
         <S.StaticContainer>
           <MyExperiencedSkills />
@@ -89,11 +85,7 @@ function App() {
           <Experience />
         </S.StaticContainer>
 
-        <S.WideContainer bgColor={PURPLE['100']}>
-          <S.StaticContainer>
-            <Portfolios />
-          </S.StaticContainer>
-        </S.WideContainer>
+
 
         <S.StaticContainer>
           <Architecture />

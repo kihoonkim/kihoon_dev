@@ -1,13 +1,19 @@
-import styled from 'styled-components'
-import MainImage from '../../assets/main-image.webp'
-import Text from '../common/Text'
-import EmailLink from '../common/EmailLink'
-import { TABLET_S_MAX_WIDTH } from '../../constants/breakpoints'
+import styled from "styled-components";
+import Text from "../common/Text";
+import EmailLink from "../common/EmailLink";
+import { TABLET_L_MAX_WIDTH } from "../../constants/breakpoints";
+import ProfileImage from "../../assets/profile.jpeg";
+import EmailIcon from "../../assets/ic-email.svg";
 
 const S = {
   Container: styled.div`
     width: 100%;
     display: flex;
+
+    @media (max-width: ${TABLET_L_MAX_WIDTH}px) {
+      flex-direction: column-reverse;
+      gap: 5rem;
+    }
   `,
   LeftContainer: styled.div`
     width: 60%;
@@ -16,7 +22,7 @@ const S = {
     flex-direction: column;
     gap: 3rem;
 
-    @media (max-width: ${TABLET_S_MAX_WIDTH}px) {
+    @media (max-width: ${TABLET_L_MAX_WIDTH}px) {
       width: 100%;
     }
   `,
@@ -36,7 +42,7 @@ const S = {
   ShortDivider: styled.div`
     width: 5rem;
     height: 0.125rem;
-    border-bottom: rebeccapurple solid 0.125rem;
+    border-bottom: white solid 0.125rem;
     margin-bottom: 1rem;
   `,
   RightContainer: styled.div`
@@ -44,68 +50,67 @@ const S = {
     height: auto;
     display: flex;
     justify-content: center;
-    align-items: flex-end;
+    align-items: center;
 
-    @media (max-width: ${TABLET_S_MAX_WIDTH}px) {
-      display: none;
+    @media (max-width: ${TABLET_L_MAX_WIDTH}px) {
+      width: 100%;
     }
   `,
-  ProfileContainer: styled.div`
-    position: relative;
-    width: 30rem;
-    height: 30rem;
-  `,
   ProfileImage: styled.img`
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    height: 100%;
+    width: 20rem;
+    height: 20rem;
+    border-radius: 20rem;
+    border: 1px solid #000;
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+
+    @media (max-width: ${TABLET_L_MAX_WIDTH}px) {
+      width: 15rem;
+      height: 15rem;
+    }
+  `,
+  EmailContainer: styled.div`
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
   `,
 }
 function AboutMe() {
   return (
     <S.Container>
       <S.LeftContainer>
-        <S.Greeting>
-          <Text type='H3' text={'안녕하세요.'} />
-          <Text type='H1' text={' 김기훈 '} weight={800} />
-          <Text type='H3' text={'입니다.'} />
-        </S.Greeting>
         <S.Title>
-          <Text type='H3' text={'저는 '} />
-          <Text type='H2' text={'Fullstack Developer '} weight={800} />
-          <Text type='H3' text={'입니다.'} />
+          <Text type='H1' text={"Hi. I'm Kihoon Kim\nA Fullstack Developer\nbased in Seoul."} color={'#DEDEDE'} />
         </S.Title>
         <S.Description>
           <Text
-            type='B2'
-            text={'사용자에게 가치있는 기능을 빠르게 전달하는 것을 가장 중요하게 생각합니다.'}
+            type='B1'
+            text={'저는 사용자에게 가치있는 기능을 빠르게 전달하는 것을 가장 중요하게 생각합니다.'}
+            color={'#959595'}
+            hoverColor={'#959595'}
           />
           <Text
-            type='B2'
+            type='B1'
             text={
-              '그리고 그 과정속에서 어떻게 하면 제품과 팀이 더 나아 질 수 있을지 고민하는 것을 좋아합니다.'
+              "그리고 그 과정 속에서 제품과 팀이 더 나아 질 수 있도록 돕는 일을 좋아합니다."
             }
+            color={'#959595'}
+            hoverColor={'#959595'}
           />
         </S.Description>
         <S.Contact>
           <S.ShortDivider />
           <div>
-            <Text type='B2' text={'‍채용 제안'} weight={800} />
-            <Text type='B2' text={' 및 '} />
-            <Text type='B2' text={'커피 챗'} weight={800} />
-            <Text type='B2' text={'은 아래 '} />
-            <Text type='B2' text={'Email'} weight={800} />
-            <Text type='B2' text={' 로 연락해 주세요'} />
+            <Text type='B2' text={'‍채용 제안 및 커피챗은 아래 email 로 연락 주세요.'} />
           </div>
-          <EmailLink type='B1' email='kihoon.dev@gmail.com' />
+          <S.EmailContainer>
+            <img src={EmailIcon} alt="email"/>
+            <EmailLink type='B1' email='kihoon.dev@gmail.com' />
+          </S.EmailContainer>
         </S.Contact>
       </S.LeftContainer>
 
       <S.RightContainer>
-        <S.ProfileContainer>
-          <S.ProfileImage src={MainImage} />
-        </S.ProfileContainer>
+        <S.ProfileImage src={ProfileImage} />
       </S.RightContainer>
     </S.Container>
   )

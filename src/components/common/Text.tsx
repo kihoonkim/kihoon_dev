@@ -22,7 +22,7 @@ const S = {
   `,
 }
 
-export type FontType = 'H0' | 'H1' | 'H2' | 'H3' | 'B1' | 'B2' | 'B3'
+export type FontType = 'H0' | 'H1' | 'H2' | 'H3' | 'B1' | 'B2' | 'B3' | 'B4'
 
 const FontStyle = {
   H0: {
@@ -51,6 +51,10 @@ const FontStyle = {
   },
   B3: {
     lineHeight: '160%',
+    size: '0.85rem',
+  },
+  B4: {
+    lineHeight: '130%',
     size: '0.75rem',
   },
 }
@@ -62,7 +66,9 @@ interface AppProps {
   hoverColor?: string
 }
 
-function Text({ type, text, weight = 400, color = 'black', hoverColor = 'black' }: AppProps) {
+function Text({ type, text, color, hoverColor, weight = 400 }: AppProps) {
+  color = color || 'white'
+  hoverColor = hoverColor || color
   return (
     <S.Container {...FontStyle[type]} weight={weight} color={color} hoverColor={hoverColor}>
       {text}

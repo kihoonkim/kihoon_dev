@@ -1,6 +1,7 @@
 import styled from 'styled-components'
 import Text from '../common/Text'
 import LinkA from '../common/LinkA'
+import ContentTitle from '../common/ContentTitle'
 
 const S = {
   Container: styled.div`
@@ -68,13 +69,13 @@ function Presentations() {
   ]
   return (
     <S.Container>
-      <Text type={'H3'} text={'발표 & 글'} weight={800} />
+      <ContentTitle title={'발표 & 글'} />
 
       <S.ArticleList>
         <Text type={'B1'} text={'Blog'} weight={800} />
 
         {articles.map((item) => (
-          <LinkA type={'B1'} text={item.name} link={item.link} key={item.name} />
+          <LinkA type={'B2'} text={item.name} link={item.link} key={item.name} />
         ))}
       </S.ArticleList>
 
@@ -82,7 +83,7 @@ function Presentations() {
         <Text type={'B1'} text={'Presentation'} weight={800} />
 
         {presentations.map((item) => (
-          <LinkA type={'B1'} text={item.name} link={item.link} key={item.name} />
+          <LinkA type={'B2'} text={item.name} link={item.link} key={item.name} />
         ))}
       </S.ArticleList>
     </S.Container>

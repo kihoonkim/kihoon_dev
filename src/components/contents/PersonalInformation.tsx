@@ -52,7 +52,7 @@ const S = {
     flex-direction: column;
     align-items: flex-start;
     padding: 2rem;
-    background-color: white;
+    //background-color: white;
 
     @media (max-width: ${TABLET_S_MAX_WIDTH}px) {
       width: calc(100% - 4rem);

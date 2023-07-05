@@ -1,6 +1,5 @@
 import styled from 'styled-components'
 import Text, { FontType } from './Text'
-import { BLUE } from '../../constants/colors'
 
 const S = {
   Container: styled.a`
@@ -12,12 +11,14 @@ interface AppProps {
   type: FontType
   link: string
   text?: string
+  color?: string
+  hoverColor?: string
 }
 
-function LinkA({ type, text, link }: AppProps) {
+function LinkA({ type, text, link, color, hoverColor }: AppProps) {
   return (
     <S.Container href={link} target={'_blank'}>
-      <Text type={type} text={text || link} hoverColor={BLUE['600']} />
+      <Text type={type} text={text || link} color={color || 'white'} hoverColor={hoverColor || '#959595'} />
     </S.Container>
   )
 }

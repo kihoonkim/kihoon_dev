@@ -1,6 +1,5 @@
 import styled from 'styled-components'
 import Text, { FontType } from './Text'
-import { BLUE } from '../../constants/colors'
 
 const S = {
   Container: styled.a`
@@ -16,7 +15,7 @@ interface AppProps {
 function EmailLink({ type, email }: AppProps) {
   return (
     <S.Container href={`mailto:${email}`}>
-      <Text type={type} text={email} hoverColor={BLUE['600']} />
+      <Text type={type} text={email} hoverColor={'#959595'} />
     </S.Container>
   )
 }
