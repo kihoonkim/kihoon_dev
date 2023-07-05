@@ -60,7 +60,7 @@ const S = {
     width: 20rem;
     height: 20rem;
     border-radius: 20rem;
-    border: 1px solid #000;
+    border: 1px solid #ffffff;
     box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
 
     @media (max-width: ${TABLET_L_MAX_WIDTH}px) {

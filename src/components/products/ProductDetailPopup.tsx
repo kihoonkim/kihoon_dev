@@ -8,11 +8,13 @@ import { TABLET_L_MAX_WIDTH, TABLET_S_MAX_WIDTH } from "../../constants/breakpoi
 const S = {
   Container: styled.div`
     display: flex;
-    width: 50vw;
+    width: 60vw;
     height: 50vh;
     background-color: #202020;
     border-radius: 0.5rem;
     overflow: hidden;
+    max-width: 55rem;
+    max-height: 30rem;
     
     @media (max-width: ${TABLET_L_MAX_WIDTH}px) {
       width: 80vw;

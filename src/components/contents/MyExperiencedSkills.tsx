@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 import Text from '../common/Text'
 import SkillImage from '../../assets/dont-give-up.jpg'
-import { TABLET_L_MAX_WIDTH } from '../../constants/breakpoints'
+import { PHONE_MAX_WIDTH, TABLET_L_MAX_WIDTH } from "../../constants/breakpoints";
 import ContentTitle from '../common/ContentTitle'
 
 const S = {
@@ -33,6 +33,9 @@ const S = {
 
     @media (max-width: ${TABLET_L_MAX_WIDTH}px) {
       width: 60%;
+    }
+    @media (max-width: ${PHONE_MAX_WIDTH}px) {
+      width: 100%;
     }
   `,
 }

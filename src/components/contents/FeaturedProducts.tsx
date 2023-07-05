@@ -37,12 +37,12 @@ function FeaturedProducts() {
       name: 'UJET',
       description: '',
       contribution: 'Twilio 및 MS Teams Integration',
-      techStack: 'Typescript, React, Nest.js, MongoDB, AWS(ECS, S3, SageMaker)',
+      techStack: 'Ruby, MySql, Twilio, MS Graph API',
       link: ['https://ujet.cx'],
       image: UjetImage,
     },
     {
-      category: 'AI',
+      category: 'ai',
       name: 'BuffAI',
       description: '게임 Asset을 Stable Diffusion 기반으로 다양하게 생성해 주는 AI 플랫폼',
       contribution: 'AWS Sagemaker 기반 아키텍쳐 수립 및 F/E, B/E 개발 리딩',
@@ -51,7 +51,7 @@ function FeaturedProducts() {
       image: BuffaiImage,
     },
     {
-      category: 'WEB3',
+      category: 'web3',
       name: 'Wez NFT Gallery',
       description: '여러 지갑을 연결하여 NFT를 한번에 모아서 볼 수 있는 APP',
       contribution: 'B/E 및 Android 개발',
@@ -61,7 +61,7 @@ function FeaturedProducts() {
       image: WezGalleryImage,
     },
     {
-      category: 'Web',
+      category: 'web',
       name: 'Homepages',
       description: 'NPX 계열사 홈페이지 개발',
       contribution: 'F/E 개발 리딩',
@@ -75,7 +75,7 @@ function FeaturedProducts() {
       image: HomepagesImage,
     },
     {
-      category: 'Web',
+      category: 'web',
       name: 'Marimba',
       description: '화이트보드, 채팅, 비디오콜 기능이 있는 온라인 협업 툴',
       contribution:
@@ -89,7 +89,7 @@ function FeaturedProducts() {
 
   const sides: ProductType[] = [
     {
-      category: 'Web',
+      category: 'web',
       name: 'Paperlog',
       description: '캔버스위에 자유롭게 쓰는 블로그',
       contribution: '',
@@ -98,7 +98,7 @@ function FeaturedProducts() {
       image: PaperlogImage,
     },
     // {
-    //   category: 'Web',
+    //   category: 'web',
     //   name: 'OnePic',
     //   description: '하루 중 가장 아름다운 사진 한장',
     //   contribution: 'F/E, B/E 개발',
@@ -107,7 +107,7 @@ function FeaturedProducts() {
     //   image: OnepicImage,
     // },
     // {
-    //   category: 'Mobile',
+    //   category: 'mobile',
     //   name: 'Korean Dictation',
     //   description: '받아쓰기 앱',
     //   contribution: 'F/E, B/E 개발',
@@ -116,7 +116,7 @@ function FeaturedProducts() {
     //   image: DictationImage,
     // },
     // {
-    //   category: 'Web',
+    //   category: 'web',
     //   name: 'Sliding',
     //   description: 'Google Slide 를 ',
     //   contribution: 'F/E, B/E 개발',

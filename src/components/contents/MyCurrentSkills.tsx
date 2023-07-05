@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 import Text from '../common/Text'
-import { TABLET_L_MAX_WIDTH } from '../../constants/breakpoints'
+import { PHONE_MAX_WIDTH, TABLET_L_MAX_WIDTH } from "../../constants/breakpoints";
 import SkillCard, { SkillType } from '../skills/SkillCard'
 import ContentTitle from '../common/ContentTitle'
 
@@ -25,14 +25,19 @@ const S = {
     gap: 1rem;
     justify-content: flex-start;
   `,
-  TechContainer: styled.div`
-    width: 8rem;
+  SkillContainer: styled.div`
+    width: 10rem;
     height: 10rem;
     display: flex;
     flex-direction: column;
     padding: 1rem;
     :hover {
       transform: scale(1.05);
+    }
+
+    @media (max-width: ${PHONE_MAX_WIDTH}px) {
+      width: 100%;
+      height: auto;
     }
   `,
 }
@@ -56,11 +61,11 @@ function MyCurrentSkills() {
     },
     {
       category: 'CI/CD',
-      list: [{ name: 'Git' }, { name: 'Github Action' }, { name: 'Jenkins' }],
+      list: [{ name: 'Git' }, { name: 'Docker' }, { name: 'Github Action' }, { name: 'Jenkins' }],
     },
     {
       category: 'AWS',
-      list: [{ name: 'ECS' }, { name: 'S3' }, { name: 'DocumentDB' }],
+      list: [{ name: 'ECS' }, { name: 'SQS' }, { name: 'S3' }, { name: 'DocumentDB' }],
     },
     {
       category: 'Process',
@@ -95,9 +100,9 @@ function MyCurrentSkills() {
 
       <S.RightContainer>
         {list.map((skill) => (
-          <S.TechContainer key={skill.category}>
+          <S.SkillContainer key={skill.category}>
             <SkillCard skill={skill} />
-          </S.TechContainer>
+          </S.SkillContainer>
         ))}
       </S.RightContainer>
     </S.Container>

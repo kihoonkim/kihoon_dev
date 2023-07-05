@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import Text from "./Text";
 
 const S = {
   Container: styled.div`
@@ -12,6 +13,25 @@ const S = {
     justify-content: center;
     align-items: center;
   `,
+  CloseButton: styled.div`
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    width: 3rem;
+    height: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    z-index: 2;
+    
+    :hover {
+      background-color: #959595;
+      color: black;
+    }
+  `,
   OutsideContainer: styled.div`
     position: absolute;
     top: 0;
@@ -19,7 +39,7 @@ const S = {
     width: 100%;
     height: 100%;
     background-color: black;
-    opacity: 0.6;
+    opacity: 0.7;
     z-index: 0;
   `,
   ContentContainer: styled.div`
@@ -41,6 +61,9 @@ function CommonModal({ isOpen, onClose, children }: AppProps) {
 
   return <S.Container>
     <S.OutsideContainer onClick={onClose}/>
+    <S.CloseButton onClick={onClose}>
+      <Text type={'H3'} text={'X'} weight={800} />
+    </S.CloseButton>
     <S.ContentContainer onClick={(e)=>{ e.stopPropagation() }}>
       {children}
     </S.ContentContainer>

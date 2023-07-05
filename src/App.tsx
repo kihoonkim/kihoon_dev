@@ -9,6 +9,7 @@ import FeaturedProducts from './components/contents/FeaturedProducts'
 import Experience from './components/contents/Experience'
 import Architecture from './components/contents/Architecture'
 import Presentations from './components/contents/Presentations'
+import ContactMe from "./components/contents/ContactMe";
 
 const S = {
   Container: styled.div`
@@ -33,14 +34,14 @@ const S = {
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
-    margin-top: 8rem;
+    margin-top: 5rem;
   `,
-  WideContainer: styled.div<{ bgColor: string }>`
+  WideContainer: styled.div<{ bgColor?: string }>`
     width: 100%;
     display: flex;
     justify-content: center;
     align-items: flex-start;
-    // background-color: ${({ bgColor }) => bgColor || 'white'};
+     background-color: ${({ bgColor }) => bgColor || 'black'};
   `,
   StaticContainer: styled.div`
     width: calc(100% - 12rem);
@@ -61,17 +62,15 @@ function App() {
       </S.HeaderContainer>
 
       <S.MainContainer>
-        <S.StaticContainer>
-          <AboutMe />
-        </S.StaticContainer>
+        <S.WideContainer>
+          <S.StaticContainer>
+            <AboutMe />
+          </S.StaticContainer>
+        </S.WideContainer>
 
         <S.StaticContainer>
           <FeaturedProducts />
         </S.StaticContainer>
-
-        {/*<S.StaticContainer>*/}
-        {/*  <PersonalInformation />*/}
-        {/*</S.StaticContainer>*/}
 
         <S.StaticContainer>
           <MyCurrentSkills />
@@ -85,8 +84,6 @@ function App() {
           <Experience />
         </S.StaticContainer>
 
-
-
         <S.StaticContainer>
           <Architecture />
         </S.StaticContainer>
@@ -94,6 +91,12 @@ function App() {
         <S.StaticContainer>
           <Presentations />
         </S.StaticContainer>
+
+        <S.WideContainer>
+          <S.StaticContainer>
+            <ContactMe />
+          </S.StaticContainer>
+        </S.WideContainer>
       </S.MainContainer>
     </S.Container>
   )

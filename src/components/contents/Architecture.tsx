@@ -1,8 +1,8 @@
 import styled from 'styled-components'
-import Text from '../common/Text'
 import BuffAiArchitectureImage from '../../assets/buffai-architecture.png'
 import { TABLET_L_MAX_WIDTH, TABLET_S_MAX_WIDTH } from '../../constants/breakpoints'
 import ContentTitle from '../common/ContentTitle'
+import ArchitectureCard, { ArchitectureType } from "../architectures/ArchitectureCard";
 
 const S = {
   Container: styled.div`
@@ -25,17 +25,12 @@ const S = {
       grid-template-columns: repeat(1, 1fr);
     }
   `,
-  ArchitectureContainer: styled.div`
-    display: flex;
-    flex-direction: column;
-  `,
-  Image: styled.img`
-    width: 100%;
-    object-fit: cover;
-  `,
+
 }
+
+
 function Architecture() {
-  const list = [
+  const list: ArchitectureType[] = [
     { name: 'BuffAi', link: '', image: BuffAiArchitectureImage },
     { name: 'Wez NFT Gallery', link: '', image: BuffAiArchitectureImage },
     { name: 'Marimba', link: '', image: BuffAiArchitectureImage },
@@ -46,10 +41,7 @@ function Architecture() {
 
       <S.ArchitectureList>
         {list.map((item) => (
-          <S.ArchitectureContainer key={item.name}>
-            <Text type={'B2'} text={item.name} weight={800} />
-            <S.Image src={item.image} />
-          </S.ArchitectureContainer>
+          <ArchitectureCard item={item} key={item.name}/>
         ))}
       </S.ArchitectureList>
     </S.Container>

@@ -44,7 +44,7 @@ function Experience() {
           <Text type={'B2'} text={' '} />
           <Text type={'B2'} text={'21.11 ~ 23.07 : 1년 9개월'} />
           <Text type={'B2'} text={'Venture Studio'} weight={800} />
-          <Text type={'B2'} text={'Developer, DevOps'} />
+          <Text type={'B2'} text={'Developer, SRE'} />
           <Text type={'B2'} text={'BuffAI, SpeakEdi, Ontonomy, Point Avenue'} />
         </S.CardContainer>
 
@@ -54,7 +54,7 @@ function Experience() {
           <Text type={'B2'} text={'11.08 ~ 21.11 : 10년 3개월'} />
           <Text type={'B2'} text={'Agile Core Team, SW Engineering Team'} weight={800} />
           <Text type={'B2'} text={'Developer, Architect'} />
-          <Text type={'B2'} text={'Marimba, Digital signage, Allianz Life'} />
+          <Text type={'B2'} text={'Marimba, Digital Signage, Allianz Life'} />
         </S.CardContainer>
       </S.CardList>
     </S.Container>

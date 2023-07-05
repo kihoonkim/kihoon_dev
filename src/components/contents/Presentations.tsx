@@ -2,6 +2,7 @@ import styled from 'styled-components'
 import Text from '../common/Text'
 import LinkA from '../common/LinkA'
 import ContentTitle from '../common/ContentTitle'
+import { TABLET_S_MAX_WIDTH } from "../../constants/breakpoints";
 
 const S = {
   Container: styled.div`
@@ -9,6 +10,14 @@ const S = {
     display: flex;
     flex-direction: column;
     gap: 1rem;
+  `,
+  ArticleListContainer: styled.div`
+    display: flex;
+
+    @media (max-width: ${TABLET_S_MAX_WIDTH}px) {
+      flex-direction: column;
+      gap: 2rem;
+    }
   `,
   ArticleList: styled.div`
     width: 100%;
@@ -71,21 +80,23 @@ function Presentations() {
     <S.Container>
       <ContentTitle title={'발표 & 글'} />
 
-      <S.ArticleList>
-        <Text type={'B1'} text={'Blog'} weight={800} />
+      <S.ArticleListContainer>
+        <S.ArticleList>
+          <Text type={'B1'} text={'Presentation'} weight={800} />
 
-        {articles.map((item) => (
-          <LinkA type={'B2'} text={item.name} link={item.link} key={item.name} />
-        ))}
-      </S.ArticleList>
+          {presentations.map((item) => (
+            <LinkA type={'B2'} text={item.name} link={item.link} key={item.name} />
+          ))}
+        </S.ArticleList>
 
-      <S.ArticleList>
-        <Text type={'B1'} text={'Presentation'} weight={800} />
+        <S.ArticleList>
+          <Text type={'B1'} text={'Blog'} weight={800} />
 
-        {presentations.map((item) => (
-          <LinkA type={'B2'} text={item.name} link={item.link} key={item.name} />
-        ))}
-      </S.ArticleList>
+          {articles.map((item) => (
+            <LinkA type={'B2'} text={item.name} link={item.link} key={item.name} />
+          ))}
+        </S.ArticleList>
+      </S.ArticleListContainer>
     </S.Container>
   )
 }
