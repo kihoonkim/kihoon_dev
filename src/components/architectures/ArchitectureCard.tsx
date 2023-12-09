@@ -2,6 +2,7 @@ import styled from 'styled-components'
 import FullscreenImageViewer from '../common/FullscreenImageViewer'
 import { useState } from 'react'
 import LinkA from "../common/LinkA";
+import Text from "../common/Text";
 
 const S = {
   Container: styled.div`
@@ -22,6 +23,7 @@ interface AppProps {
 
 export type ArchitectureType = {
   name: string
+  description: string
   link: string
   image: string
 }
@@ -32,6 +34,7 @@ function ArchitectureCard({ item }: AppProps) {
   return (
     <S.Container>
       <LinkA type={'B2'} link={item.link} text={item.name} weight={800} hasIcon />
+      <Text type={'B2'} text={item.description} />
       <S.Image src={item.image} onClick={() => setIsOpen(true)} />
 
       <FullscreenImageViewer src={item.image} isOpen={isOpen} onClose={() => setIsOpen(false)} />

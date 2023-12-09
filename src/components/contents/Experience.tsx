@@ -40,6 +40,15 @@ function Experience() {
 
       <S.CardList>
         <S.CardContainer>
+          <Text type={'B1'} text={'UJET'} weight={900} />
+          <Text type={'B2'} text={' '} />
+          <Text type={'B2'} text={'23.07 ~ 현재'} />
+          <Text type={'B2'} text={'Google CCAIP'} weight={800} />
+          <Text type={'B2'} text={'Fullstack Developer'} />
+          <Text type={'B2'} text={'Twilio, MS teams integration, Extension Call'} />
+        </S.CardContainer>
+
+        <S.CardContainer>
           <Text type={'B1'} text={'NPX TeraArk'} weight={900} />
           <Text type={'B2'} text={' '} />
           <Text type={'B2'} text={'21.11 ~ 23.07 : 1년 9개월'} />

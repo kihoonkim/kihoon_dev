@@ -31,9 +31,9 @@ const S = {
 
 function Architecture() {
   const list: ArchitectureType[] = [
-    { name: 'BuffAi', link: '', image: BuffAiArchitectureImage },
-    { name: 'Wez NFT Gallery', link: '', image: BuffAiArchitectureImage },
-    { name: 'Marimba', link: '', image: BuffAiArchitectureImage },
+    { name: 'BuffAi', description: 'AWS SageMaker 기반 아키텍쳐', link: '', image: BuffAiArchitectureImage },
+    { name: 'Wez NFT Gallery', description: 'WalletConnect, Moralis 기반 Web3 아키텍쳐', link: '', image: BuffAiArchitectureImage },
+    { name: 'Marimba', description: 'Kubernetes(AWS EKS) 기반 아키텍쳐', link: '', image: BuffAiArchitectureImage },
   ]
   return (
     <S.Container>
