@@ -6,6 +6,7 @@ import BuffaiImage from '../../assets/buffai.jpeg'
 import HomepagesImage from '../../assets/npx-homepages.png'
 import WezGalleryImage from '../../assets/wez-gallery.png'
 import PaperlogImage from '../../assets/paperlog.png'
+import SlidingImage from '../../assets/slidevery.png'
 import ProductCard, { ProductType } from '../products/ProductCard'
 import ContentTitle from '../common/ContentTitle'
 import { TABLET_L_MAX_WIDTH, TABLET_S_MAX_WIDTH } from '../../constants/breakpoints'
@@ -93,9 +94,18 @@ function FeaturedProducts() {
       name: 'Paperlog',
       description: '캔버스위에 자유롭게 쓰는 블로그',
       contribution: 'side project',
-      techStack: '- F/E: Typescript, React.js, Konva.js\n- B/E: Nest.js, MongoDB\n- AWS: EKS, S3, Cloudfront',
+      techStack: '- F/E: Typescript, React.js, Konva.js\n- B/E: Nest.js, MongoDB\n- AWS: ECS, S3, Cloudfront',
       link: ['https://paperlog.kihoon.dev'],
       image: PaperlogImage,
+    },
+    {
+      category: 'web',
+      name: 'Slidevery',
+      description: '슬라이드를 공유하고 관심있는 모임을 만드는 공간',
+      contribution: 'side project',
+      techStack: ' F/E: Typescript, Next.js\n- B/E: Nest.js, MongoDB\n- AWS: ECS, S3, Cloudfront',
+      link: ['https://slidevery.com'],
+      image: SlidingImage,
     },
     // {
     //   category: 'web',
@@ -114,15 +124,6 @@ function FeaturedProducts() {
     //   techStack: '',
     //   link: ['https://dictation.kihoon.dev'],
     //   image: DictationImage,
-    // },
-    // {
-    //   category: 'web',
-    //   name: 'Sliding',
-    //   description: 'Google Slide 를 ',
-    //   contribution: 'F/E, B/E 개발',
-    //   techStack: '',
-    //   link: ['https://sliding.kihoon.dev'],
-    //   image: SlidingImage,
     // },
   ]
   return (

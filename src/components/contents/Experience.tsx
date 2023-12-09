@@ -36,7 +36,7 @@ const S = {
 function Experience() {
   return (
     <S.Container>
-      <ContentTitle title={'경력'} />
+      <ContentTitle title={'경력 & 학력'} />
 
       <S.CardList>
         <S.CardContainer>
@@ -64,6 +64,13 @@ function Experience() {
           <Text type={'B2'} text={'Agile Core Team, SW Engineering Team'} weight={800} />
           <Text type={'B2'} text={'Developer, Architect'} />
           <Text type={'B2'} text={'Marimba, Digital Signage, Allianz Life'} />
+        </S.CardContainer>
+
+        <S.CardContainer>
+          <Text type={'B1'} text={'서울시립대학교'} weight={900} />
+          <Text type={'B2'} text={' '} />
+          <Text type={'B2'} text={'2005 - 2011'} />
+          <Text type={'B2'} text={'컴퓨터과학부 학사'} weight={800} />
         </S.CardContainer>
       </S.CardList>
     </S.Container>
