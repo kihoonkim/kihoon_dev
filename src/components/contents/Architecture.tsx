@@ -1,5 +1,4 @@
 import styled from 'styled-components'
-import BuffAiArchitectureImage from '../../assets/buffai-architecture.png'
 import { TABLET_L_MAX_WIDTH, TABLET_S_MAX_WIDTH } from '../../constants/breakpoints'
 import ContentTitle from '../common/ContentTitle'
 import ArchitectureCard, { ArchitectureType } from "../architectures/ArchitectureCard";
@@ -25,15 +24,15 @@ const S = {
       grid-template-columns: repeat(1, 1fr);
     }
   `,
-
 }
 
 
 function Architecture() {
   const list: ArchitectureType[] = [
-    { name: 'BuffAi', description: 'AWS SageMaker 기반 아키텍쳐', link: '', image: BuffAiArchitectureImage },
-    { name: 'Wez NFT Gallery', description: 'WalletConnect, Moralis 기반 Web3 아키텍쳐', link: '', image: BuffAiArchitectureImage },
-    { name: 'Marimba', description: 'Kubernetes(AWS EKS) 기반 아키텍쳐', link: '', image: BuffAiArchitectureImage },
+    { name: 'Slidevery', description: 'Server Side Rendering 아키텍쳐', link: 'https://slidevery.com', embedLink: 'https://slidevery.com/slides/neetdLFHhVcwjouBFVez5i/embed' },
+    { name: 'BuffAi', description: 'AWS SageMaker 기반 아키텍쳐', link: 'https://buffai.io', embedLink: 'https://slidevery.com/slides/vU6P5UJRL6CiRYqgmnN3PW/embed' },
+    { name: 'Wez NFT Gallery', description: 'WalletConnect, Moralis 기반 Web3 아키텍쳐', link: 'https://we-z.xyz', embedLink: 'https://slidevery.com/slides/neetdLFHhVcwjouBFVez5i/embed' },
+    { name: 'Homepage', description: 'Static Site 아키텍쳐', link: '', embedLink: 'https://slidevery.com/slides/33Kqtt1ed8MwkxtDwvTGZG/embed' },
   ]
   return (
     <S.Container>
