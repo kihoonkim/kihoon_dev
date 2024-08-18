@@ -19,7 +19,6 @@ function ContactMe() {
 
       <EmailLink type={'B3'} email={'kihoon.dev@gmail.com'} />
       <LinkA type={'B3'} link={'https://www.linkedin.com/in/kihoon-kim-4630ba13b'} />
-      <LinkA type={'B3'} link={'https://github.com/kihoonkim'} />
     </S.Container>
   );
 }
