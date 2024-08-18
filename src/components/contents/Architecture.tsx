@@ -29,10 +29,10 @@ const S = {
 
 function Architecture() {
   const list: ArchitectureType[] = [
-    { name: 'Slidevery', description: 'Server Side Rendering 아키텍쳐', link: 'https://slidevery.com', embedLink: 'https://slidevery.com/slides/neetdLFHhVcwjouBFVez5i/embed' },
-    { name: 'BuffAi', description: 'AWS SageMaker 기반 아키텍쳐', link: 'https://buffai.io', embedLink: 'https://slidevery.com/slides/vU6P5UJRL6CiRYqgmnN3PW/embed' },
-    { name: 'Wez NFT Gallery', description: 'WalletConnect, Moralis 기반 Web3 아키텍쳐', link: 'https://we-z.xyz', embedLink: 'https://slidevery.com/slides/neetdLFHhVcwjouBFVez5i/embed' },
-    { name: 'Homepage', description: 'Static Site 아키텍쳐', link: '', embedLink: 'https://slidevery.com/slides/33Kqtt1ed8MwkxtDwvTGZG/embed' },
+    { name: 'DESCR', description: 'Server Side Rendering 아키텍쳐', link: 'https://descr.dev', embedLink: 'https://descr.dev/slides/neetdLFHhVcwjouBFVez5i/embed' },
+    { name: 'BuffAi', description: 'AWS SageMaker 기반 아키텍쳐', link: 'https://buffai.io', embedLink: 'https://descr.dev/slides/vU6P5UJRL6CiRYqgmnN3PW/embed' },
+    { name: 'Wez NFT Gallery', description: 'WalletConnect, Moralis 기반 Web3 아키텍쳐', link: 'https://we-z.xyz', embedLink: 'https://descr.dev/slides/neetdLFHhVcwjouBFVez5i/embed' },
+    { name: 'Homepage', description: 'Static Site 아키텍쳐', link: '', embedLink: 'https://descr.dev/slides/33Kqtt1ed8MwkxtDwvTGZG/embed' },
   ]
   return (
     <S.Container>

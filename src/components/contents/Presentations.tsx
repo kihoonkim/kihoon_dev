@@ -45,35 +45,35 @@ function Presentations() {
   const presentations = [
     {
       name: '개발자는 어떻게 일하는가?',
-      link: 'https://docs.google.com/presentation/d/1NJg7EDywRWXyIG6m1xXim3h1iLkCJvXZnEDDG_0zYGg/edit#slide=id.p',
+      link: 'https://descr.dev/slides/8xFKsRuN4QcU4yfJ7cnZMu',
     },
     {
       name: 'MSA 해본 척 하기',
-      link: 'https://docs.google.com/presentation/d/1Ms-waJ6rtHUD1qr1EvD451zlMIuKUwuMTNbnoQADmxQ/edit#slide=id.p',
+      link: 'https://descr.dev/slides/8VjRQ7WRwUuCp9gFV1eBSJ',
     },
     {
       name: 'Agile Fundamentals',
-      link: 'https://docs.google.com/presentation/d/1IITWa2bP5VS36y3IcxWRmXm_0b83VbadaHJbqpZzriw/edit#slide=id.p',
+      link: 'https://descr.dev/slides/gSHtCT2TL5m3H7MrnoL1wX',
     },
     {
-      name: 'Why to do TDD?',
-      link: 'https://docs.google.com/presentation/d/1LFw2FzCTItFZy4DT8InMcN6o8cK0CmKxLCzF-3REPOY/edit#slide=id.p',
+      name: 'TDD',
+      link: 'https://descr.dev/slides/egH9x5cSk8YMeyq7S5SEjA',
     },
     {
       name: 'Konva Position 51% 이해하기',
-      link: 'https://docs.google.com/presentation/d/1nWPsQ6MqUHy2c2saqjDzJDd01zDa9sF4RoFr0w2DO2o/edit#slide=id.g7859a8b883_0_23',
+      link: 'https://descr.dev/slides/fwuz5WHXh5NxjYgysYKpd7',
     },
     {
       name: 'OOP',
-      link: 'https://docs.google.com/presentation/d/1DRRVlRpx2Xwo5loflz8NN4zejlJF7eSX9y9r-OnoUog/edit#slide=id.p',
+      link: 'https://descr.dev/slides/8jmmxzm88a9rVAv9xNH4d8',
     },
     {
       name: 'Javascript Function',
-      link: 'https://docs.google.com/presentation/d/1tfflNZV_PLZjfJ2AdV3NGTxy28rRQYQtnvzwSm_PsW0/edit#slide=id.p',
+      link: 'https://descr.dev/slides/cpDXxqyj6hHG7DEmCpjo4n',
     },
     {
       name: 'JS는 Single Thread 일까?',
-      link: 'https://docs.google.com/presentation/d/1-5KdlEstIuTYbNQJ2u3XMVtZV5zJdM5iSzNnuE4EoMc/edit#slide=id.p',
+      link: 'https://descr.dev/slides/kBe9rWRpVjPYBfef25wR67',
     },
   ]
   return (

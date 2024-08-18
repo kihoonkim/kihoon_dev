@@ -100,11 +100,11 @@ function FeaturedProducts() {
     },
     {
       category: 'web',
-      name: 'Slidevery',
+      name: 'DESCR',
       description: '슬라이드를 공유하고 관심있는 모임을 만드는 공간',
       contribution: 'side project',
       techStack: ' F/E: Typescript, Next.js\n- B/E: Nest.js, MongoDB\n- AWS: ECS, S3, Cloudfront',
-      link: ['https://slidevery.com'],
+      link: ['https://descr.dev'],
       image: SlidingImage,
     },
     // {
