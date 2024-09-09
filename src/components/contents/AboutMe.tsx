@@ -79,7 +79,7 @@ function AboutMe() {
     <S.Container>
       <S.LeftContainer>
         <S.Title>
-          <Text type='H1' text={"Hi. I'm Kihoon Kim\nA Fullstack Developer\nbased in Seoul."} color={'#DEDEDE'} />
+          <Text type='H1' text={"안녕하세요. 김기훈 입니다."} color={'#DEDEDE'} />
         </S.Title>
         <S.Description>
           <Text
