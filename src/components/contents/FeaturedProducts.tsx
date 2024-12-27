@@ -7,6 +7,7 @@ import HomepagesImage from '../../assets/npx-homepages.png'
 import WezGalleryImage from '../../assets/wez-gallery.png'
 import PaperlogImage from '../../assets/paperlog.png'
 import SlidingImage from '../../assets/slidevery.png'
+import OldCalendarImage from '../../assets/old-calendar.png'
 import ProductCard, { ProductType } from '../products/ProductCard'
 import ContentTitle from '../common/ContentTitle'
 import { TABLET_L_MAX_WIDTH, TABLET_S_MAX_WIDTH } from '../../constants/breakpoints'
@@ -106,6 +107,15 @@ function FeaturedProducts() {
       techStack: ' F/E: Typescript, Next.js\n- B/E: Nest.js, MongoDB\n- AWS: ECS, S3, Cloudfront',
       link: ['https://descr.dev'],
       image: SlidingImage,
+    },
+    {
+      category: 'web',
+      name: '옛날달력',
+      description: '옛날 달력',
+      contribution: 'side project',
+      techStack: ' F/E: React, Typescript \n- AWS: ECS, S3, Cloudfront',
+      link: ['https://calendar.kihoon.dev'],
+      image: OldCalendarImage,
     },
     // {
     //   category: 'web',
