@@ -8,6 +8,7 @@ import WezGalleryImage from '../../assets/wez-gallery.png'
 import PaperlogImage from '../../assets/paperlog.png'
 import SlidingImage from '../../assets/slidevery.png'
 import OldCalendarImage from '../../assets/old-calendar.png'
+import MandalartImage from '../../assets/mandalart.png'
 import ProductCard, { ProductType } from '../products/ProductCard'
 import ContentTitle from '../common/ContentTitle'
 import { TABLET_L_MAX_WIDTH, TABLET_S_MAX_WIDTH } from '../../constants/breakpoints'
@@ -113,9 +114,18 @@ function FeaturedProducts() {
       name: '옛날달력',
       description: '옛날 달력',
       contribution: 'side project',
-      techStack: ' F/E: React, Typescript \n- AWS: ECS, S3, Cloudfront',
+      techStack: ' F/E: React, Typescript, css-module \n- AWS: ECS, S3, Cloudfront',
       link: ['https://calendar.kihoon.dev'],
       image: OldCalendarImage,
+    },
+    {
+      category: 'web',
+      name: '만다라트',
+      description: '목적을 달성하는 기법',
+      contribution: 'side project',
+      techStack: ' F/E: React, Typescript, Styled Component \n- AWS: ECS, S3, Cloudfront',
+      link: ['https://mandalart.kihoon.dev/hello-world'],
+      image: MandalartImage,
     },
     // {
     //   category: 'web',
