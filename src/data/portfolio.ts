@@ -59,8 +59,7 @@ export const projects: Project[] = [
         description:
             "Google OEM CCAIP 기반 실리콘밸리 스타트업에서 Voip 기술을 활용한 Agent to Agent Extension Call 및 Open API Monetization 팀 개발 리딩",
         link: "https://ujet.cx",
-        image:
-            "https://kihoon.dev/assets/ujetcx-5695d22c.jpeg",
+        image: "/assets/ujetcx.jpeg",
         imageAlt: "UJET platform interface showing Twilio and MS Teams integration",
         tags: ["Ruby", "MySql", "Redis", "React", "Typescript"],
     },
@@ -69,8 +68,7 @@ export const projects: Project[] = [
         description:
             "게임 Asset을 Stable Diffusion 기반으로 다양하게 생성해 주는 AI 플랫폼. AWS Sagemaker 기반 아키텍쳐 수립 및 F/E, B/E 개발 리딩",
         link: "https://buffai.io",
-        image:
-            "https://kihoon.dev/assets/buffai-7560f167.jpeg",
+        image: "/assets/buffai.jpeg",
         imageAlt: "BuffAI platform generating game assets using AI",
         tags: ["Typescript", "React", "Nest.js", "MongoDB", "AWS"],
     },
@@ -79,8 +77,7 @@ export const projects: Project[] = [
         description:
             "여러 지갑을 연결하여 NFT를 한번에 모아서 볼 수 있는 APP. B/E 및 Android 개발",
         link: "https://we-z.xyz",
-        image:
-            "https://kihoon.dev/assets/wez-gallery-a743ab37.png",
+        image: "/assets/wez-gallery.png",
         imageAlt: "Wez NFT Gallery app displaying various NFTs",
         tags: ["Typescript", "Nest.js", "Kotlin", "Jetpack Compose", "AWS"],
     },
@@ -89,8 +86,7 @@ export const projects: Project[] = [
         description:
             "스타트업 빌더 Teraark의 공식 웹사이트 초기 개발 (Single player)",
         link: "http://teraark.com",
-        image:
-            "https://kihoon.dev/assets/npx-homepages-ba5d7721.png",
+        image: "/assets/npx-homepages.png",
         imageAlt: "NPX Teraark official website homepage",
         tags: ["Typescript", "React", "Gatsby", "Styled-components"],
     },
@@ -99,8 +95,7 @@ export const projects: Project[] = [
         description:
             "화이트보드, 채팅, 비디오콜 기능이 있는 온라인 협업 툴. F/E, B/E 개발리딩 및 쿠버네티스 기반 아키텍쳐 구현",
         link: "https://marimba.team",
-        image:
-            "https://kihoon.dev/assets/marimba-6956be04.png",
+        image: "/assets/marimba.png",
         imageAlt: "Marimba collaborative whiteboarding and communication tool",
         tags: ["Javascript", "React.js", "Konva.js", "Socket.io", "AWS"],
     },
