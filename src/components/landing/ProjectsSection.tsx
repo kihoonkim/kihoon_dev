@@ -2,6 +2,7 @@
 
 import { projects } from "@/data/portfolio";
 import { motion } from "framer-motion";
+import Image from "next/image";
 
 export default function ProjectsSection() {
     const containerVariants = {
@@ -48,10 +49,12 @@ export default function ProjectsSection() {
                             className="group rounded-xl border border-border bg-card overflow-hidden hover:border-zinc-700 transition-colors flex flex-col"
                         >
                             <div className="aspect-video w-full overflow-hidden bg-zinc-900 relative">
-                                <img
+                                <Image
                                     alt={project.imageAlt}
                                     className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                                     src={project.image}
+                                    width={600}
+                                    height={400}
                                 />
                             </div>
                             <div className="p-5 flex flex-col flex-1">

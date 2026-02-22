@@ -2,6 +2,7 @@
 
 import { personalInfo } from "@/data/portfolio";
 import { motion } from "framer-motion";
+import Image from "next/image";
 
 export default function HeroSection() {
     const containerVariants = {
@@ -103,10 +104,13 @@ export default function HeroSection() {
                             <div className="relative">
                                 <div className="w-64 h-64 md:w-80 md:h-80 rounded-full border-2 border-zinc-800/50 p-2 bg-zinc-900/30 backdrop-blur-sm">
                                     <div className="w-full h-full rounded-full overflow-hidden bg-zinc-900 flex items-center justify-center border border-zinc-800">
-                                        <img
+                                        <Image
                                             src={personalInfo.profileImage}
                                             alt={`${personalInfo.name} profile`}
                                             className="w-full h-full object-cover scale-110 translate-y-4"
+                                            width={500}
+                                            height={500}
+                                            priority
                                         />
                                     </div>
                                 </div>
